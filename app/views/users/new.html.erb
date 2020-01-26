@@ -1,2 +1,7 @@
-<h1>Login form</h1>
+<h1>Create form</h1>
 <p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_for @user do |form| %>
+  <%= render "form", f: form %>
+  <%= form.submit %>
+<% end %>

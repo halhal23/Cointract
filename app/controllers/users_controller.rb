@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = User.all
+    @users = User.all
   end
 
   def show
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    @user.assing_attributes(user_params)
+    @user.assign_attributes(user_params)
     if @user.save
       redirect_to @user, notive: "会員情報を更新しました。"
     else
