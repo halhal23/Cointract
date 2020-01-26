@@ -1,5 +1,10 @@
-<% if @user.present? %>
-  <h1><%= @user.name %></h1>
-  <h1><%= @user.email %></h1>
+<% if @users.present? %>
+  <h1><%= @users[0].name %></h1>
+  <h1><%= @users[0].email %></h1>
+  <p>Find me in app/views/users/index.html.erb</p>
+  
+  <%= link_to "edit", edit_user_path(@users[0]) %>
+  <%= link_to "destroy", user_path(@users[0]), method: :delete, data: { confirm: "本当に登録を解除しますか？" } %>
 <% end %>
-<p>Find me in app/views/users/index.html.erb</p>
+
+<%= link_to "new", :new_user %>
