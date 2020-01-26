@@ -1,0 +1,102 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  background-image: url(top-page-bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  color: white;
+}
+
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+label.logo {
+  color: white;
+  font-size: 32px;
+  line-height: 80px;
+  padding: 0 80px;
+  font-family: 'Impact'
+}
+
+label.logo > .logo-text-coin {
+  font-family: 'Times New Roman';
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  transition: .3s;
+}
+
+nav ul li a {
+  line-height: 80px;
+  padding: 0 30px;
+  transition: .3s;
+  color: white;
+}
+
+nav ul li:hover {
+  background: #0cc;
+}
+
+#check {
+  display: none;
+}
+
+i.fas {
+  font-size: 33px;
+  line-height: 80px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  nav {
+    display: block;
+    width: 100%;
+  }
+  label.logo {
+    font-size: 24px
+  }
+
+  i.fas {
+    display: block;
+    float: right;
+    padding: 0 30px;
+  }
+
+  nav ul {
+    display: block;
+    position: fixed;
+    left: -100%;
+    background: #2c3e50;
+    transition: all .4s ;
+    width: 100%;
+  }
+
+  nav ul li {
+    border-bottom: 1px solid white;
+  }
+
+  #check:checked ~ ul {
+    display: block;
+    left: 0;
+  }
+
+}
